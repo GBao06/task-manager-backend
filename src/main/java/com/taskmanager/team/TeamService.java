@@ -95,6 +95,7 @@ public class TeamService {
     private TeamMemberResponse toMemberResponse(TeamMember member) {
         return new TeamMemberResponse(
                 member.getId(),
+                member.getUser().getId(),
                 member.getUser().getFullName(),
                 member.getUser().getEmail(),
                 member.getRoleInTeam()

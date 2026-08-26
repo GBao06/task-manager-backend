@@ -7,12 +7,14 @@ import java.util.UUID;
 public class TeamMemberResponse {
 
     private UUID id;
+    private UUID userId;
     private String fullName;
     private String email;
     private TeamRole roleInTeam;
 
-    public TeamMemberResponse(UUID id, String fullName, String email, TeamRole roleInTeam) {
+    public TeamMemberResponse(UUID id, UUID userId, String fullName, String email, TeamRole roleInTeam) {
         this.id = id;
+        this.userId = userId;
         this.fullName = fullName;
         this.email = email;
         this.roleInTeam = roleInTeam;
@@ -20,6 +22,10 @@ public class TeamMemberResponse {
 
     public UUID getId() {
         return id;
+    }
+
+    public UUID getUserId() {
+        return userId;
     }
 
     public String getFullName() {
